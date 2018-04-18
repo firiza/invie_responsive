@@ -13,7 +13,7 @@
 	<section id="portada" class="portada">
 			<header id="header" class="header contenedor">
 		<figure class="logotipo">
-			<img src="images/invie.png" width="186" height="60" alt="Invie logotipo"/>
+			<img data-src="images/invie.png" width="186" height="60" alt="Invie logotipo"/>
 		</figure> 
 		<span class=" burguer-button icon-menu" id="burguer-button"></span>  
 		<nav class="menu" id="menu">
@@ -42,7 +42,7 @@
 		<h2>Nuestras guitarras</h2><!-- titulo -->
 	 
 		<article class="guitarra">
-			<img class="derecha" src="images/invie-acustica.png" width="328" alt="Guitarra Invie Acoustica" >
+			<img class="derecha" data-src="images/invie-acustica.png" width="328" alt="Guitarra Invie Acoustica" >
 		 	<div class="contenedor-guitarra-a">
 				<h3 class="title-b">Invie Acustica</h3>
 				<ol>
@@ -54,7 +54,7 @@
 		</article>
 	 
 		<article class="guitarra">
-			<img class="izquierda" src="images/invie-classic.png" width="350" alt="Guitarra Invie Classic" >
+			<img class="izquierda" data-src="images/invie-classic.png" width="350" alt="Guitarra Invie Classic" >
 			<div class="contenedor-guitarra-b">
 				<h3 class="title-b">Invie Classic</h3>
 				<ol>
@@ -69,7 +69,7 @@
 	<footer class="footer">
 		<div class="contenedor">
 			<div class="contacto">
-				<img src="images/invie-white.png" alt="logotipo blanco" />
+				<img data-src="images/invie-white.png" alt="logotipo blanco" />
 				<a href="tel:+543024456678"><strong>Teléfono</strong><span>3024456678</span></a>
 				<a href="mailto:contacto@invie.com"><strong>E-mail</strong><span>contacto@invie.com</span></a>
 			</div>  
@@ -111,6 +111,7 @@
 			</form>
 		</div>  
 	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
 <script>
 	var $burguerButton = document.getElementById("burguer-button");
 	var $menu = document.getElementById("menu");
@@ -119,6 +120,10 @@
 	function encender() {
 		$menu.classList.toggle("active")
 	};
+
+	var bLazy = new Blazy({
+    selector: "img"
+});
 </script>
 </body>
 </html>
